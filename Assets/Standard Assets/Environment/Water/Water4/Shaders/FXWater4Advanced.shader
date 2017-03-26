@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 Shader "FX/Water4" {
 Properties {
 	_ReflectionTex ("Internal reflection", 2D) = "white" {}
@@ -130,7 +132,7 @@ CGINCLUDE
 	{
 		v2f o;
 		
-		half3 worldSpaceVertex = mul(_Object2World,(v.vertex)).xyz;
+		half3 worldSpaceVertex = mul(unity_ObjectToWorld,(v.vertex)).xyz;
 		half3 vtxForAni = (worldSpaceVertex).xzz;
 
 		half3 nrml;
@@ -148,7 +150,7 @@ CGINCLUDE
 		v.vertex.xyz += offsets;
 		
 		// one can also use worldSpaceVertex.xz here (speed!), albeit it'll end up a little skewed
-		half2 tileableUv = mul(_Object2World,(v.vertex)).xz;
+		half2 tileableUv = mul(unity_ObjectToWorld,(v.vertex)).xz;
 		
 		o.bumpCoords.xyzw = (tileableUv.xyxy + _Time.xxxx * _BumpDirection.xyzw) * _BumpTiling.xyzw;
 
@@ -197,7 +199,7 @@ CGINCLUDE
 		half4 edgeBlendFactors = half4(1.0, 0.0, 0.0, 0.0);
 		
 		#ifdef WATER_EDGEBLEND_ON
-			half depth = SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPos));
+			float depth = SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPos));
 			depth = LinearEyeDepth(depth);
 			edgeBlendFactors = saturate(_InvFadeParemeter * (depth-i.screenPos.w));
 			edgeBlendFactors.y = 1.0-edgeBlendFactors.y;
@@ -235,7 +237,7 @@ CGINCLUDE
 	{
 		v2f_noGrab o;
 		
-		half3 worldSpaceVertex = mul(_Object2World,(v.vertex)).xyz;
+		half3 worldSpaceVertex = mul(unity_ObjectToWorld,(v.vertex)).xyz;
 		half3 vtxForAni = (worldSpaceVertex).xzz;
 
 		half3 nrml;
@@ -253,14 +255,14 @@ CGINCLUDE
 		v.vertex.xyz += offsets;
 		
 		// one can also use worldSpaceVertex.xz here (speed!), albeit it'll end up a little skewed
-		half2 tileableUv = mul(_Object2World,v.vertex).xz;
+		half2 tileableUv = mul(unity_ObjectToWorld,v.vertex).xz;
 		o.bumpCoords.xyzw = (tileableUv.xyxy + _Time.xxxx * _BumpDirection.xyzw) * _BumpTiling.xyzw;
 
 		o.viewInterpolator.xyz = worldSpaceVertex - _WorldSpaceCameraPos;
 
 		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 
-		o.screenPos = ComputeScreenPos(o.pos);
+		o.screenPos = ComputeNonStereoScreenPos(o.pos);
 		
 		o.normalInterpolator.xyz = nrml;
 		o.normalInterpolator.w = 1;//GetDistanceFadeout(o.screenPos.w, DISTANCE_SCALE);
@@ -321,7 +323,7 @@ CGINCLUDE
 	{
 		v2f_simple o;
 		
-		half3 worldSpaceVertex = mul(_Object2World, v.vertex).xyz;
+		half3 worldSpaceVertex = mul(unity_ObjectToWorld, v.vertex).xyz;
 		half2 tileableUv = worldSpaceVertex.xz;
 
 		o.bumpCoords.xyzw = (tileableUv.xyxy + _Time.xxxx * _BumpDirection.xyzw) * _BumpTiling.xyzw;
@@ -330,7 +332,7 @@ CGINCLUDE
 		
 		o.pos = mul(UNITY_MATRIX_MVP,  v.vertex);
 		
-		o.viewInterpolator.w = 1;//GetDistanceFadeout(ComputeScreenPos(o.pos).w, DISTANCE_SCALE);
+		o.viewInterpolator.w = 1;//GetDistanceFadeout(ComputeNonStereoScreenPos(o.pos).w, DISTANCE_SCALE);
 		
 		UNITY_TRANSFER_FOG(o,o.pos);
 		return o;
