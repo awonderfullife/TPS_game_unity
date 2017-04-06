@@ -1,0 +1,63 @@
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 5500 (ID=0x1616)
+    Vendor:   Intel
+    VRAM:     2109 MB
+    Driver:   20.19.15.4568
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.065 seconds
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Unity\FPS_game_unity\Build\TPS_zombies_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 50Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.972738 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 458 -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 13.659575 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2076.
+Total: 1.838134 ms (FindLiveObjects: 0.216004 ms CreateObjectMapping: 0.104503 ms MarkObjects: 0.600892 ms  DeleteObjects: 0.915334 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.791563 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2076.
+Total: 1.838134 ms (FindLiveObjects: 0.184279 ms CreateObjectMapping: 0.108701 ms MarkObjects: 0.599026 ms  DeleteObjects: 0.944259 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.815111 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2076.
+Total: 1.833935 ms (FindLiveObjects: 0.198275 ms CreateObjectMapping: 0.117565 ms MarkObjects: 0.591095 ms  DeleteObjects: 0.926065 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 19.670368 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2076.
+Total: 1.234908 ms (FindLiveObjects: 0.127829 ms CreateObjectMapping: 0.070446 ms MarkObjects: 0.418478 ms  DeleteObjects: 0.617221 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 44.605076 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2076.
+Total: 1.474706 ms (FindLiveObjects: 0.159553 ms CreateObjectMapping: 0.167018 ms MarkObjects: 0.523914 ms  DeleteObjects: 0.623286 ms)
+
